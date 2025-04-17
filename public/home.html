@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Translite</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="{{ url_for('static', filename='app.js') }}"></script>
+    </head>
+    <body>
+        <div class="container h-100 w-100">
+            <!-- Nav? -->
+            <div class="row w-100 justify-content-center align-items-center" style="height: 20vh;">
+                <div class="col-auto d-flex justify-content-center align-items-center">
+                    <img class="img-fluid" style="opacity: 0.75; max-height: 50%; max-width: 50%;" src="{{ url_for('static', filename='images/logo.png')}}"/>
+                </div>
+            </div>
+            <!-- Input box -->
+            <div class="row w-100 justify-content-center align-items-center" style="height: 30vh;">
+                <textarea class="w-75 form-control fs-1 h-75 mt-5" style="opacity: 0.5; background:rgba(226, 240, 249, 0.5); border: 2px solid #556d86; border-radius: 0.5rem;" id="inputText" rows="2"></textarea>
+            </div>
+            <!-- Cool arrow thingy -->
+            <div class="row w-100 justify-content-center align-items-center" style="opacity: 0.65; height: 20vh;">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-2 justify-content-center align-items-center">
+                    <div class="indicator justify-content-center align-items-center m-auto">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="col-sm-4 text-center justify-content-center align-items-center m-auto" style="color: #556d86;">
+                    <div class="h-50 w-75 m-auto" style="padding: 1.5rem 0.5rem; background: rgba(150, 213, 252, 0.1); border-radius: 1rem; border: 1px solid #556d86;">
+                        <strong class="fs-6">Language Detected:</strong>
+                        <br>
+                        <p class="fs-6" id="languageClass">N/A</p>
+                    </div>
+                </div>
+                <div class="col-sm-2 justify-content-center align-items-center">
+                    <div class="indicator justify-content-center align-items-center m-auto">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="col-sm-2"></div>
+            </div>
+            <!-- Output box -->
+            <div class="row w-100 justify-content-center align-items-center" style="height: 30vh;">
+                <textarea class="form-control fs-1 h-75 w-75" style="opacity: 0.5; background:rgba(226, 240, 249, 0.5); border: 2px solid #556d86; border-radius: 0.5rem;" id="outputText" rows="2"></textarea>
+            </div>
+        </div>  
+    </body>
+</html>
